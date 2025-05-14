@@ -1,0 +1,343 @@
+/* New Section Styles */
+#use-cases .use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+#integrations .integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.integration-item img {
+    width: 80px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.integration-item img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.integration-item p {
+     font-size: 0.9em;
+     margin-top: 5px;
+     color: var(--text);
+     opacity: 0.8;
+}
+
+/* CTA Container Styling */
+.cta-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Mobile Responsiveness for Landing Page */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    #hero {
+        padding: 80px 0 60px 0;
+        min-height: auto;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .features-grid,
+    #use-cases .use-case-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .step {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .step .step-icon {
+        font-size: 2.5em;
+    }
+
+    .step h3 {
+        font-size: 1.5em;
+    }
+
+    .step p {
+        font-size: 1em;
+    }
+
+    .testimonial-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+        font-size: 1em;
+    }
+    .testimonial-card::before {
+        font-size: 2em;
+    }
+
+    footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .theme-switcher {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .theme-select {
+        width: auto;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+    header {
+        top: 0;
+        width: 100%;
+    }
+
+    #contact form > div {
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+     #contact > .container > div[style] {
+        max-width: 100%;
+        padding: 20px;
+     }
+
+    #integrations .integration-grid {
+         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+         gap: 15px;
+     }
+     .integration-item img {
+         width: 60px;
+     }
+      .integration-item p {
+          font-size: 0.8em;
+      }
+
+     .cta-container {
+         margin-top: 30px;
+     }
+}
+
+/* Additional adjustments for very small screens (based on previous 396px prompt) */
+@media screen and (max-width: 480px) {
+    header .container {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.3em;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.8em;
+         padding: 2px 5px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.3em;
+    }
+
+    .feature-card p {
+        font-size: 0.9em;
+    }
+
+    .step .step-icon {
+        font-size: 2em;
+    }
+
+    .step h3 {
+        font-size: 1.3em;
+    }
+
+    .step p {
+        font-size: 0.9em;
+    }
+
+    .testimonial-card p {
+        font-size: 0.9em;
+    }
+
+    footer .footer-links a,
+    footer .copyright {
+        font-size: 0.8em;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+
+     #integrations .integration-grid {
+         grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+         gap: 10px;
+     }
+      .integration-item img {
+         width: 40px;
+     }
+       .integration-item p {
+          font-size: 0.7em;
+      }
+
+      .cta-container {
+         margin-top: 25px;
+     }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        padding: 40px 0;
+    }
+
+    #hero h1 {
+        font-size: 2.2em;
+    }
+    #hero p {
+        font-size: 1em;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .section-title {
+         margin-bottom: 30px;
+    }
+    .cta-container {
+         margin-top: 30px;
+    }
+}
+
+/* Neomorphic Adjustments for new sections */
+.theme-neomorphic .use-case-grid .feature-card,
+.theme-neomorphic .integration-item {
+    box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
+    background: #e0e5ec;
+}
+.theme-neomorphic .integration-item img {
+    opacity: 1;
+}
+
+/* Glassmorphism Adjustments for new sections */
+.theme-glassmorphism .use-case-grid .feature-card,
+.theme-glassmorphism .integration-item {
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+.theme-glassmorphism .integration-item img {
+     opacity: 0.8;
+}
+.theme-glassmorphism .integration-item p {
+     color: var(--text);
+}
+
+/* Retro Adjustments for new sections */
+.theme-retro .use-case-grid .feature-card,
+.theme-retro .integration-item {
+    border: 2px solid var(--primary);
+    box-shadow: 4px 4px 0 var(--secondary);
+}
+.theme-retro .use-case-grid .feature-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 6px 6px 0 var(--secondary);
+}
+.theme-retro .integration-item img {
+     opacity: 1;
+}
+.theme-retro .integration-item p {
+     color: var(--text);
+}
+
+/* Default styles for Integration Items */
+.integration-item {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid transparent;
+}
+ .integration-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+ }
